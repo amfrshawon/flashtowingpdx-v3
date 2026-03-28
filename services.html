@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Towing Services Portland OR | Flash Towing PDX | 24/7 All Vehicle Types</title>
+<meta name="description" content="Full towing and roadside service menu — local, long-distance, heavy-duty, motorcycle, jump start, lockout, fuel delivery, winch out, and cash for junk cars. (971) 326-8952.">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* ── PAGE HERO ── */
+.page-hero{position:relative;padding:140px 0 80px;overflow:hidden;background:var(--dark2)}
+.page-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 80px,rgba(245,168,0,.015) 80px,rgba(245,168,0,.015) 82px)}
+.page-hero-content{position:relative;z-index:2}
+
+/* ── SERVICE CATEGORY TABS ── */
+#cat-tabs{background:var(--dark3);border-bottom:1px solid rgba(255,255,255,.06);position:sticky;top:72px;z-index:100}
+.tab-scroll{display:flex;overflow-x:auto;padding:0 24px;gap:0;scrollbar-width:none}
+.tab-scroll::-webkit-scrollbar{display:none}
+.tab-btn{padding:18px 28px;font-family:var(--ff-sub);font-size:15px;font-weight:700;color:rgba(255,255,255,.5);background:none;border:none;cursor:pointer;white-space:nowrap;transition:all .2s;border-bottom:3px solid transparent;position:relative;top:1px}
+.tab-btn:hover{color:var(--white)}
+.tab-btn.active{color:var(--gold);border-bottom-color:var(--gold)}
+
+/* ── TOWING SECTION ── */
+.svc-section{padding:80px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.svc-section:last-of-type{border-bottom:none}
+.svc-section:nth-child(even){background:var(--dark2)}
+.svc-section:nth-child(odd){background:var(--dark)}
+.svc-section-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.svc-section-inner.reverse{direction:rtl}
+.svc-section-inner.reverse > *{direction:ltr}
+.svc-visual{border-radius:16px;overflow:hidden;position:relative;background:var(--dark3);min-height:320px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.07)}
+.svc-visual-emoji{font-size:100px;opacity:.9;filter:drop-shadow(0 0 40px rgba(245,168,0,.3))}
+.svc-visual-accent{position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),rgba(245,168,0,.2))}
+.svc-detail{padding:8px 0}
+.svc-detail h2{font-family:var(--ff-head);font-size:clamp(2.4rem,4vw,3.5rem);line-height:1;color:var(--white);margin-bottom:16px}
+.svc-detail h2 span{color:var(--gold)}
+.svc-detail p{font-size:16px;color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:20px}
+.svc-bullets{display:grid;gap:10px;margin-bottom:28px}
+.svc-bullet{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(255,255,255,.75)}
+.svc-bullet::before{content:'✓';min-width:22px;height:22px;border-radius:50%;background:rgba(245,168,0,.12);border:1px solid rgba(245,168,0,.25);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:11px;font-weight:900;flex-shrink:0;margin-top:1px}
+.svc-cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.price-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(245,168,0,.08);border:1px solid rgba(245,168,0,.2);border-radius:8px;padding:10px 18px;font-family:var(--ff-sub);font-size:15px;font-weight:700;color:var(--gold);margin-bottom:24px}
+.price-tag::before{content:'💲';font-size:16px}
+@media(max-width:900px){.svc-section-inner{grid-template-columns:1fr;gap:40px}.svc-section-inner.reverse{direction:ltr}}
+@media(max-width:600px){.svc-visual{min-height:200px}.svc-visual-emoji{font-size:72px}}
+
+/* ── ALL SERVICES GRID (quick overview) ── */
+#quick-grid{padding:80px 0;background:var(--dark3)}
+.quick-grid-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06);margin-top:48px}
+.qg-item{background:var(--dark4);padding:28px 20px;text-align:center;transition:background .2s;cursor:default;position:relative;overflow:hidden}
+.qg-item::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.qg-item:hover{background:var(--dark3)}.qg-item:hover::after{transform:scaleX(1)}
+.qg-icon{font-size:32px;margin-bottom:12px}
+.qg-name{font-family:var(--ff-sub);font-size:16px;font-weight:700;color:var(--white);margin-bottom:6px}
+.qg-avail{font-size:12px;color:var(--gold);font-weight:600}
+@media(max-width:900px){.quick-grid-inner{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.quick-grid-inner{grid-template-columns:1fr}}
+
+/* ── FAQ ── */
+#svc-faq{padding:80px 0;background:var(--dark)}
+.faq-list{max-width:760px;margin:48px auto 0;display:grid;gap:1px;background:rgba(255,255,255,.06)}
+.faq-item{background:var(--dark2)}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;font-family:var(--ff-sub);font-size:18px;font-weight:700;color:var(--white);cursor:pointer;gap:16px;transition:color .2s}
+.faq-q:hover{color:var(--gold)}.faq-q .fi{font-size:20px;flex-shrink:0;transition:transform .3s;color:var(--gold)}
+.faq-q.open .fi{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}.faq-a.open{max-height:300px}
+.faq-a-inner{padding:0 24px 22px;font-size:15px;color:var(--gray);line-height:1.7}
+</style>
+</head>
+<body>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <span class="section-label">Full Service Menu</span>
+      <h1 class="section-title" style="font-size:clamp(3rem,7vw,5.5rem)">Every Towing &amp;<br><span>Roadside Service</span></h1>
+      <p class="section-sub">If it has wheels, we can move it — or get it running. Available 24 hours a day, 7 days a week, across all of Portland metro.</p>
+      <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
+        <a href="tel:9713268952" class="btn btn-gold">📞 Call (971) 326-8952</a>
+        <a href="index.html#book" class="btn btn-outline">Book Online</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORY TABS -->
+<div id="cat-tabs">
+  <div class="tab-scroll">
+    <button class="tab-btn active" onclick="scrollTo('towing')">Towing</button>
+    <button class="tab-btn" onclick="scrollTo('roadside')">Roadside</button>
+    <button class="tab-btn" onclick="scrollTo('specialty')">Specialty</button>
+    <button class="tab-btn" onclick="scrollTo('junk')">Junk Cars</button>
+    <button class="tab-btn" onclick="scrollTo('quick-grid')">All Services</button>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════
+     TOWING SERVICES
+════════════════════════════════════ -->
+<div id="towing"></div>
+
+<!-- Emergency Towing -->
+<section class="svc-section">
+  <div class="container">
+    <div class="svc-section-inner">
+      <div class="svc-visual fade-up">
+        <div class="svc-visual-emoji">🚨</div>
+        <div class="svc-visual-accent"></div>
+      </div>
+      <div class="svc-detail fade-up" style="transition-delay:.1s">
+        <span class="section-label">Available 24/7</span>
+        <h2>Emergency <span>Towing</span></h2>
+        <div class="price-tag">Transparent flat-rate pricing — quoted before dispatch</div>
+        <p>Accidents don't follow a schedule. Whether you're in a ditch on I-84 at 3 AM or wrapped around a guardrail on I-205 during rush hour — we dispatch immediately, every time.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet">Immediate dispatch — no hold times, no voicemail</div>
+          <div class="svc-bullet">Flatbed and wheel-lift trucks ready to roll</div>
+          <div class="svc-bullet">Accident recovery and scene cleanup coordination</div>
+          <div class="svc-bullet">Works with all major insurance companies</div>
+          <div class="svc-bullet">Average 30-minute arrival anywhere in Portland metro</div>
+        </div>
+        <div class="svc-cta-row">
+          <a href="tel:9713268952" class="btn btn-red" style="font-size:18px">🚨 Emergency: (971) 326-8952</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Local Towing -->
+<section class="svc-section">
+  <div class="container">
+    <div class="svc-section-inner reverse">
+      <div class="svc-visual fade-up">
+        <div class="svc-visual-emoji">🚗</div>
+        <div class="svc-visual-accent"></div>
+      </div>
+      <div class="svc-detail fade-up" style="transition-delay:.1s">
+        <span class="section-label">Portland Metro</span>
+        <h2>Local <span>Towing</span></h2>
+        <div class="price-tag">Starting from a flat rate — no per-mile surprises</div>
+        <p>Need your car moved from point A to point B anywhere in Portland metro? We handle hundreds of local tows every month — to shops, to homes, to dealerships.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet">Flatbed towing — safest method for all vehicles</div>
+          <div class="svc-bullet">Wheel-lift available for tight urban spaces</div>
+          <div class="svc-bullet">All makes and models — sedans, SUVs, trucks</div>
+          <div class="svc-bullet">Dealership, shop, and home delivery</div>
+          <div class="svc-bullet">Same quoted price from dispatch to drop-off</div>
+        </div>
+        <div class="svc-cta-row">
+          <a href="tel:9713268952" class="btn btn-gold">Call for a Quote</a>
+          <a href="index.html#book" class="btn btn-outline">Book Online</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Long-Distance -->
+<section class="svc-section">
+  <div class="container">
+    <div class="svc-section-inner">
+      <div class="svc-visual fade-up">
+        <div class="svc-visual-emoji">🛣️</div>
+        <div class="svc-visual-accent"></div>
+      </div>
+      <div class="svc-detail fade-up" style="transition-delay:.1s">
+        <span class="section-label">Statewide &amp; Beyond</span>
+        <h2>Long-Distance <span>Towing</span></h2>
+        <div class="price-tag">Competitive flat-rate long-haul pricing</div>
+        <p>Buying a car out of state? Moving across Oregon? Need your vehicle delivered from Seattle to Portland? We handle long-distance transport with the same care as local tows.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet">Statewide coverage across all of Oregon</div>
+          <div class="svc-bullet">Interstate transport — WA, ID, CA and beyond</div>
+          <div class="svc-bullet">Enclosed transport available for classic cars</div>
+          <div class="svc-bullet">Door-to-door vehicle delivery service</div>
+          <div class="svc-bullet">Real-time updates during transport</div>
+        </div>
+        <div class="svc-cta-row">
+          <a href="tel:9713268952" class="btn btn-gold">Call for Long-Distance Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Heavy-Duty -->
+<section class="svc-section">
+  <div class="container">
+    <div class="svc-section-inner reverse">
+      <div class="svc-visual fade-up">
+        <div class="svc-visual-emoji">🚛</div>
+        <div class="svc-visual-accent"></div>
+      </div>
+      <div class="svc-detail fade-up" style="transition-delay:.1s">
+        <span class="section-label">Commercial Grade</span>
+        <h2>Heavy-Duty <span>Towing</span></h2>
+        <div class="price-tag">Commercial fleet pricing available</div>
+        <p>Most tow companies can't touch a loaded semi or a 45-foot RV. We have the specialized heavy-duty wreckers and rotators that Portland's commercial operators rely on.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet">Semi-trucks, tractor-trailers, and big rigs</div>
+          <div class="svc-bullet">Buses, coach vehicles, and transit equipment</div>
+          <div class="svc-bullet">Large RVs, fifth-wheels, and motor coaches</div>
+          <div class="svc-bullet">Construction equipment and farm machinery</div>
+          <div class="svc-bullet">Rotator crane recovery for complex extractions</div>
+          <div class="svc-bullet">Commercial fleet accounts with priority dispatch</div>
+        </div>
+        <div class="svc-cta-row">
+          <a href="tel:9713268952" class="btn btn-gold">Call for Heavy-Duty Dispatch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Medium-Duty -->
+<section class="svc-section">
+  <div class="container">
+    <div class="svc-section-inner">
+      <div class="svc-visual fade-up">
+        <div class="svc-visual-emoji">📦</div>
+        <div class="svc-visual-accent"></div>
+      </div>
+      <div class="svc-detail fade-up" style="transition-delay:.1s">
+        <span class="section-label">Box Trucks &amp; Vans</span>
+        <h2>Medium-Duty <span>Towing</span></h2>
+        <div class="price-tag">Flat-rate pricing — no hidden charges</div>
+        <p>Too big for a standard flatbed, too small for a heavy wrecker — medium-duty vehicles fall in a gap that most companies aren't equipped for. We are.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet">Box trucks and delivery vans up to 26,000 lbs GVW</div>
+          <div class="svc-bullet">Passenger vans, shuttle buses, and sprinters</div>
+          <div class="svc-bullet">Step vans and catering trucks</div>
+          <div class="svc-bullet">Loaded cargo vehicles — no need to unload first</div>
+          <div class="svc-bullet">Business fleet emergency response</div>
+        </div>
+        <div class="svc-cta-row">
+          <a href="tel:9713268952" class="btn btn-gold">Call for Medium-Duty</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     ROADSIDE SERVICES
+════════════════════════════════════ -->
+<div id="roadside"></div>
+
+<!-- Jump Start -->
+<section class="svc-section">
+  <div class="container">
+    <div class="svc-section-inner reverse">
+      <div class="svc-visual fade-up">
+        <div class="svc-visual-emoji">⚡</div>
+        <div class="svc-visual-accent"></div>
+      </div>
+      <div class="svc-detail fade-up" style="transition-delay:.1s">
+        <span class="section-label">Roadside Assistance</span>
+        <h2>Jump <span>Start</span></h2>
+        <div class="price-tag">Flat-rate jump start service — no tow required</div>
+        <p>Dead battery is the number one reason Portland drivers call for roadside help. Our high-output commercial jump packs start virtually any vehicle — even diesel trucks and large SUVs.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet">Professional high-output jump packs — not jumper cables</div>
+          <div class="svc-bullet">Works on all gas, diesel, and hybrid vehicles</div>
+          <div class="svc-bullet">Battery health assessment included</div>
+          <div class="svc-bullet">No risk of electrical system damage</div>
+          <div class="svc-bullet">If the battery is dead beyond saving, towing available on the spot</div>
+        </div>
+        <div class="svc-cta-row">
+          <a href="tel:9713268952" class="btn btn-gold">Call for Jump Start</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fuel Delivery -->
+<section class="svc-section">
+  <div class="container">
+    <div class="svc-section-inner">
+      <div class="svc-visual fade-up">
+        <div class="svc-visual-emoji">⛽</div>
+        <div class="svc-visual-accent"></div>
+      </div>
+      <div class="svc-detail fade-up" style="transition-delay:.1s">
+        <span class="section-label">Roadside Assistance</span>
+        <h2>Fuel <span>Delivery</span></h2>
+        <div class="price-tag">Fuel cost + flat service fee — no gouging</div>
+        <p>Running out of gas happens to everyone. We bring enough fuel to get you to the nearest station safely — no need to walk or wait for a friend.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet">Regular gasoline and diesel available</div>
+          <div class="svc-bullet">Enough delivered to reach the nearest station</div>
+          <div class="svc-bullet">Exact fuel cost charged at current pump prices</div>
+          <div class="svc-bullet">Available across all of Portland metro, 24/7</div>
+          <div class="svc-bullet">No judgment — we've all been there</div>
+        </div>
+        <div class="svc-cta-row">
+          <a href="tel:9713268952" class="btn btn-gold">Call for Fuel Delivery</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tire Change -->
+<section class="svc-section">
+  <div class="container">
+    <div class="svc-section-inner reverse">
+      <div class="svc-visual fade-up">
+        <div class="svc-visual-emoji">🔧</div>
+        <div class="svc-visual-accent"></div>
+      </div>
+      <div class="svc-detail fade-up" style="transition-delay:.1s">
+        <span class="section-label">Roadside Assistance</span>
+        <h2>Flat Tire <span>Change</span></h2>
+        <div class="price-tag">Flat rate — spare installation or towing if no spare</div>
+        <p>Changing a tire on a Portland freeway shoulder is dangerous. Let us do it safely. We mount your spare quickly and get you back on the road — or tow you to the nearest shop if the spare isn't an option.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet">Professional roadside tire mounting</div>
+          <div class="svc-bullet">Works with any spare — full-size, donut, or run-flat</div>
+          <div class="svc-bullet">Lug nut torque verified with calibrated tools</div>
+          <div class="svc-bullet">No spare? We tow you to the nearest tire shop</div>
+          <div class="svc-bullet">Faster and safer than doing it yourself on a busy road</div>
+        </div>
+        <div class="svc-cta-row">
+          <a href="tel:9713268952" class="btn btn-gold">Call for Tire Change</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lockout -->
+<section class="svc-section">
+  <div class="container">
+    <div class="svc-section-inner">
+      <div class="svc-visual fade-up">
+        <div class="svc-visual-emoji">🔑</div>
+        <div class="svc-visual-accent"></div>
+      </div>
+      <div class="svc-detail fade-up" style="transition-delay:.1s">
+        <span class="section-label">Roadside Assistance</span>
+        <h2>Lockout <span>Service</span></h2>
+        <div class="price-tag">Flat lockout rate — no damage, guaranteed</div>
+        <p>Locked your keys inside? Left them in the ignition? Broken key in the lock? Our technicians use professional slim-jim and air wedge tools to get you in quickly — zero damage to your car or door seals.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet">Professional slim-jim and air wedge tools</div>
+          <div class="svc-bullet">Works on virtually all car makes and models</div>
+          <div class="svc-bullet">No damage to door frames, seals, or paint</div>
+          <div class="svc-bullet">Keys locked in trunk — we handle that too</div>
+          <div class="svc-bullet">Usually resolved in under 10 minutes</div>
+        </div>
+        <div class="svc-cta-row">
+          <a href="tel:9713268952" class="btn btn-gold">Call for Lockout Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Winch Out -->
+<section class="svc-section">
+  <div class="container">
+    <div class="svc-section-inner reverse">
+      <div class="svc-visual fade-up">
+        <div class="svc-visual-emoji">🪝</div>
+        <div class="svc-visual-accent"></div>
+      </div>
+      <div class="svc-detail fade-up" style="transition-delay:.1s">
+        <span class="section-label">Recovery Service</span>
+        <h2>Winch <span>Out</span></h2>
+        <div class="price-tag">Recovery-based pricing — assessed on arrival</div>
+        <p>Slid off the road in an Oregon rain? Buried in mud on a forest service road? Stuck in a ditch on Highway 26? Our powerful winch trucks can pull any vehicle back to solid ground.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet">Mud, snow, ditch, and off-road recovery</div>
+          <div class="svc-bullet">High-capacity winches for SUVs and trucks</div>
+          <div class="svc-bullet">Soft straps used to protect your frame and bumpers</div>
+          <div class="svc-bullet">Vehicle inspected after recovery before you drive away</div>
+          <div class="svc-bullet">If damage is found, towing arranged immediately</div>
+        </div>
+        <div class="svc-cta-row">
+          <a href="tel:9713268952" class="btn btn-gold">Call for Winch-Out Recovery</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     SPECIALTY SERVICES
+════════════════════════════════════ -->
+<div id="specialty"></div>
+
+<!-- Motorcycle -->
+<section class="svc-section">
+  <div class="container">
+    <div class="svc-section-inner">
+      <div class="svc-visual fade-up">
+        <div class="svc-visual-emoji">🏍️</div>
+        <div class="svc-visual-accent"></div>
+      </div>
+      <div class="svc-detail fade-up" style="transition-delay:.1s">
+        <span class="section-label">Specialty Towing</span>
+        <h2>Motorcycle <span>Towing</span></h2>
+        <div class="price-tag">Flat motorcycle towing rate — any bike, any condition</div>
+        <p>Most standard tow trucks are not equipped to move motorcycles safely. We have dedicated motorcycle carriers with soft tie-down straps, chocks, and padded surfaces — your bike arrives exactly as we found it.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet">Dedicated motorcycle flatbeds with wheel chocks</div>
+          <div class="svc-bullet">Soft nylon straps — no scratches to fairings or chrome</div>
+          <div class="svc-bullet">Sport bikes, cruisers, tourers, dirt bikes, and trikes</div>
+          <div class="svc-bullet">Laid-down bike recovery — we've done hundreds</div>
+          <div class="svc-bullet">Transport to any dealer, shop, or home location</div>
+        </div>
+        <div class="svc-cta-row">
+          <a href="tel:9713268952" class="btn btn-gold">Call for Motorcycle Towing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     JUNK CARS
+════════════════════════════════════ -->
+<div id="junk"></div>
+
+<!-- Cash for Junk Cars -->
+<section class="svc-section" style="background:var(--dark2)">
+  <div class="container">
+    <div class="svc-section-inner reverse">
+      <div class="svc-visual fade-up" style="background:linear-gradient(135deg,#1a0800,#0d0400);border-color:rgba(245,168,0,.15)">
+        <div class="svc-visual-emoji">💰</div>
+        <div class="svc-visual-accent"></div>
+      </div>
+      <div class="svc-detail fade-up" style="transition-delay:.1s">
+        <span class="section-label">Cash in Your Pocket</span>
+        <h2>Cash for <span>Junk Cars</span></h2>
+        <div class="price-tag">Up to $10,000 paid — offer locked before we arrive</div>
+        <p>Got a car you don't want anymore? Running or not, wrecked, flooded, or just old — we pay top dollar, handle all the paperwork, and tow it away for free.</p>
+        <div class="svc-bullets">
+          <div class="svc-bullet">Any make, model, or condition accepted</div>
+          <div class="svc-bullet">Free towing — we come to you anywhere in Portland metro</div>
+          <div class="svc-bullet">DMV title transfer handled completely by us</div>
+          <div class="svc-bullet">Offer never decreases at pickup — it's guaranteed</div>
+          <div class="svc-bullet">Same-day pickup in most cases</div>
+          <div class="svc-bullet">Higher payouts than salvage yards and online buyers</div>
+        </div>
+        <div class="svc-cta-row">
+          <a href="junk-car.html" class="btn btn-gold" style="font-size:18px">Get Free Junk Car Offer →</a>
+          <a href="tel:9713268952" class="btn btn-outline">Call for Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════
+     ALL SERVICES QUICK GRID
+════════════════════════════════════ -->
+<section id="quick-grid">
+  <div class="container">
+    <div style="text-align:center" class="fade-up">
+      <span class="section-label">Full Service Menu</span>
+      <h2 class="section-title">All Services at a <span>Glance</span></h2>
+      <p class="section-sub" style="margin:0 auto">One call handles it all — (971) 326-8952, available 24/7.</p>
+    </div>
+    <div class="quick-grid-inner fade-up">
+      <div class="qg-item"><div class="qg-icon">🚨</div><div class="qg-name">Emergency Towing</div><div class="qg-avail">24/7 Immediate</div></div>
+      <div class="qg-item"><div class="qg-icon">🚗</div><div class="qg-name">Local Towing</div><div class="qg-avail">Portland Metro</div></div>
+      <div class="qg-item"><div class="qg-icon">🛣️</div><div class="qg-name">Long-Distance</div><div class="qg-avail">Statewide + Beyond</div></div>
+      <div class="qg-item"><div class="qg-icon">🚛</div><div class="qg-name">Heavy-Duty Towing</div><div class="qg-avail">Semis &amp; RVs</div></div>
+      <div class="qg-item"><div class="qg-icon">📦</div><div class="qg-name">Medium-Duty</div><div class="qg-avail">Box Trucks &amp; Vans</div></div>
+      <div class="qg-item"><div class="qg-icon">🏍️</div><div class="qg-name">Motorcycle Towing</div><div class="qg-avail">All Bike Types</div></div>
+      <div class="qg-item"><div class="qg-icon">⚡</div><div class="qg-name">Jump Start</div><div class="qg-avail">Any Vehicle</div></div>
+      <div class="qg-item"><div class="qg-icon">⛽</div><div class="qg-name">Fuel Delivery</div><div class="qg-avail">Gas &amp; Diesel</div></div>
+      <div class="qg-item"><div class="qg-icon">🔧</div><div class="qg-name">Tire Change</div><div class="qg-avail">Roadside Install</div></div>
+      <div class="qg-item"><div class="qg-icon">🔑</div><div class="qg-name">Lockout Service</div><div class="qg-avail">No Damage Guarantee</div></div>
+      <div class="qg-item"><div class="qg-icon">🪝</div><div class="qg-name">Winch Out</div><div class="qg-avail">Off-Road Recovery</div></div>
+      <div class="qg-item"><div class="qg-icon">💰</div><div class="qg-name">Cash for Junk Cars</div><div class="qg-avail">Any Condition</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Strip -->
+<div style="background:var(--gold);padding:56px 0;position:relative;overflow:hidden">
+  <div style="position:absolute;font-family:var(--ff-head);font-size:10rem;color:rgba(0,0,0,.07);right:-20px;top:50%;transform:translateY(-50%);white-space:nowrap;pointer-events:none">FLASH TOWING PDX</div>
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <div>
+        <h2 style="font-family:var(--ff-head);font-size:clamp(2rem,4vw,3.2rem);color:var(--dark);line-height:1">Need Any of These Services?<br>Call Right Now.</h2>
+        <p style="font-size:16px;color:rgba(10,10,10,.6);margin-top:6px">Real dispatcher. Real ETA. No voicemail. 24/7/365.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="tel:9713268952" class="btn btn-dark" style="font-size:20px;padding:16px 32px">📞 (971) 326-8952</a>
+        <a href="index.html#book" class="btn btn-outline" style="border-color:rgba(10,10,10,.3);color:var(--dark)">Book Online</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="svc-faq">
+  <div class="container">
+    <div style="text-align:center" class="fade-up">
+      <span class="section-label">Service FAQ</span>
+      <h2 class="section-title">Common <span>Questions</span></h2>
+    </div>
+    <div class="faq-list fade-up">
+      <div class="faq-item"><button class="faq-q" onclick="tFaq(this)">Do you provide quotes before dispatching? <span class="fi">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — always. We give you a clear flat-rate quote before we send anyone out. The price we quote is the price you pay. No surprise charges when we arrive.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tFaq(this)">What's the difference between flatbed and wheel-lift towing? <span class="fi">+</span></button><div class="faq-a"><div class="faq-a-inner">Flatbed towing lifts your entire vehicle onto a flat platform — safest for all-wheel-drive, low-clearance, and damaged vehicles. Wheel-lift holds your car by two wheels. We recommend flatbed for most situations and always use it for AWD vehicles.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tFaq(this)">Can you tow my car if I don't have the keys? <span class="fi">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. We can tow vehicles without keys using our flatbed. If it's a lockout situation (keys inside), we can open the car first. If the vehicle needs to be in neutral to tow, our drivers know how to handle this for most makes and models.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tFaq(this)">Does my insurance cover towing? <span class="fi">+</span></button><div class="faq-a"><div class="faq-a-inner">Many auto insurance policies include roadside assistance or towing coverage. Call your insurer after you've called us — we work directly with all major carriers. We provide receipts for reimbursement claims.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tFaq(this)">How do you handle AWD or 4WD vehicles? <span class="fi">+</span></button><div class="faq-a"><div class="faq-a-inner">All-wheel-drive and 4WD vehicles must be transported on a flatbed with all four wheels off the ground — otherwise serious drivetrain damage can occur. We always use flatbeds for AWD/4WD vehicles at no extra charge.</div></div></div>
+      <div class="faq-item"><button class="faq-q" onclick="tFaq(this)">What payment methods do you accept? <span class="fi">+</span></button><div class="faq-a"><div class="faq-a-inner">We accept cash, all major credit and debit cards, Venmo, Zelle, and Apple Pay. Payment is collected after the service is completed — never upfront. We provide a receipt for every transaction.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+<script>
+initShared('Services');
+
+function scrollTo(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const offset = el.getBoundingClientRect().top + window.scrollY - 140;
+  window.scrollTo({ top: offset, behavior: 'smooth' });
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+function tFaq(btn) {
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+
+// Auto-highlight active tab on scroll
+const sections = ['towing','roadside','specialty','junk','quick-grid'];
+const tabBtns = document.querySelectorAll('.tab-btn');
+window.addEventListener('scroll', () => {
+  let current = 'towing';
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top < 200) current = id;
+  });
+  tabBtns.forEach((btn, i) => {
+    btn.classList.toggle('active', sections[i] === current || (current === 'quick-grid' && i === 4));
+  });
+}, { passive: true });
+</script>
+</body>
+</html>
