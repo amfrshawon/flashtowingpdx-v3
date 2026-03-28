@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flash Towing PDX | 24/7 Towing Service Portland OR | (971) 326-8952</title>
+<meta name="description" content="Portland's fastest towing service. 24/7 emergency towing, roadside assistance and cash for junk cars. Licensed and insured. Call (971) 326-8952.">
+<link rel="stylesheet" href="shared.css">
+<style>
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding-top:72px;background:var(--dark)}
+.hero-bg{position:absolute;inset:0;z-index:0;background:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover no-repeat;filter:brightness(.32) saturate(.5)}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,rgba(5,5,5,.92) 45%,rgba(5,5,5,.55) 100%)}
+.hero-content{position:relative;z-index:2;padding:80px 0;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(232,52,42,.12);border:1px solid rgba(232,52,42,.35);border-radius:100px;padding:6px 16px;font-family:var(--ff-sub);font-size:13px;font-weight:700;letter-spacing:2px;color:#ff7066;text-transform:uppercase;margin-bottom:24px}
+.hero-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--red);animation:pdot 1.5s infinite}
+@keyframes pdot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(1.5)}}
+.hero-h1{font-family:var(--ff-head);line-height:.92;letter-spacing:1px;margin-bottom:8px}
+.hero-h1 .l1{font-size:clamp(3rem,7vw,6.5rem);display:block;color:rgba(255,255,255,.9)}
+.hero-h1 .l2{font-size:clamp(3.5rem,8.5vw,8rem);display:block;color:var(--gold);text-shadow:0 0 80px rgba(245,168,0,.35),0 0 160px rgba(245,168,0,.15)}
+.hero-h1 .l3{font-size:clamp(1.4rem,2.8vw,2.4rem);font-family:var(--ff-sub);font-weight:700;color:rgba(255,255,255,.38);display:block;letter-spacing:3px;margin-top:8px}
+.hero-p{font-size:18px;color:rgba(255,255,255,.58);max-width:500px;margin:24px 0 36px;line-height:1.7}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+.hero-trust{display:flex;flex-wrap:wrap;gap:24px}
+.trust-pill{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:rgba(255,255,255,.58)}
+.trust-pill::before{content:'✓';display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;min-width:20px;border-radius:50%;background:rgba(245,168,0,.12);border:1px solid rgba(245,168,0,.28);color:var(--gold);font-size:11px;font-weight:900}
+#urgency{background:var(--red);padding:14px 0;overflow:hidden}
+.urgency-scroll{display:flex;gap:60px;animation:scrollx 22s linear infinite;white-space:nowrap}
+.urgency-scroll span{font-family:var(--ff-sub);font-size:15px;font-weight:700;letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.urgency-scroll span::before{content:'star';font-family:var(--ff-body);font-size:10px;opacity:.6}
+@keyframes scrollx{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+#trust-bar{background:var(--dark3);border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);padding:36px 0}
+.tnums{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06)}
+.tnum-item{background:var(--dark3);padding:28px 20px;text-align:center}
+.tnum-n{font-family:var(--ff-head);font-size:3rem;color:var(--gold);line-height:1}
+.tnum-l{font-size:13px;color:var(--gray);margin-top:4px;font-weight:500}
+@media(max-width:700px){.tnums{grid-template-columns:repeat(2,1fr)}}
+#services{padding:100px 0}
+.svc-hdr{display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px;margin-bottom:56px}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06)}
+.sc{background:var(--dark2);padding:32px 24px;transition:all .25s;position:relative;overflow:hidden}
+.sc::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.sc:hover{background:var(--dark3);transform:translateY(-2px)}.sc:hover::before{transform:scaleX(1)}
+.sc-icon{font-size:28px;margin-bottom:16px;display:block}
+.sc-name{font-family:var(--ff-sub);font-size:20px;font-weight:700;color:var(--white);margin-bottom:8px}
+.sc-desc{font-size:14px;color:var(--gray);line-height:1.6}
+.sc.feat{background:var(--dark3);border:1px solid rgba(245,168,0,.2)}.sc.feat .sc-name{color:var(--gold)}
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}.svc-hdr{grid-template-columns:1fr}}
+@media(max-width:500px){.svc-grid{grid-template-columns:1fr}}
+.cta-strip{background:var(--gold);padding:56px 0;position:relative;overflow:hidden}
+.cta-strip::before{content:'FLASH TOWING';position:absolute;font-family:var(--ff-head);font-size:10rem;color:rgba(0,0,0,.07);right:-20px;top:50%;transform:translateY(-50%);white-space:nowrap;pointer-events:none}
+.cta-si{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cta-st h2{font-family:var(--ff-head);font-size:clamp(2rem,4vw,3.2rem);color:var(--dark);line-height:1}
+.cta-st p{font-size:16px;color:rgba(10,10,10,.6);margin-top:6px}
+.cta-sbs{display:flex;gap:12px;flex-wrap:wrap}
+.btn-dark{background:var(--dark);color:var(--white)}
+.btn-dark:hover{background:#1a1a1a;transform:translateY(-1px)}
+#why{padding:100px 0;background:var(--dark2)}
+.wgrid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:56px}
+.wcards{display:grid;gap:16px}
+.wcard{background:var(--dark3);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:24px;display:flex;gap:16px;align-items:flex-start;transition:border-color .2s}
+.wcard:hover{border-color:rgba(245,168,0,.3)}
+.wci{width:44px;height:44px;border-radius:6px;background:rgba(245,168,0,.1);border:1px solid rgba(245,168,0,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px}
+.wct h4{font-family:var(--ff-sub);font-size:17px;font-weight:700;margin-bottom:4px}
+.wct p{font-size:14px;color:var(--gray);line-height:1.6}
+.wstat{background:var(--gold);border-radius:8px;padding:32px;text-align:center}
+.wstat .wn{font-family:var(--ff-head);font-size:4rem;color:var(--dark);line-height:1}
+.wstat .wl{font-family:var(--ff-sub);font-size:14px;font-weight:700;color:rgba(10,10,10,.6);letter-spacing:1px;text-transform:uppercase}
+@media(max-width:800px){.wgrid{grid-template-columns:1fr}}
+#book{padding:100px 0}
+.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-top:56px}
+.bform{background:var(--dark3);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:40px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fg{margin-bottom:20px}
+.fg label{display:block;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray);margin-bottom:8px}
+.fg input,.fg select,.fg textarea{width:100%;background:var(--dark4);border:1px solid rgba(255,255,255,.1);border-radius:6px;padding:14px 16px;color:var(--white);font-family:var(--ff-body);font-size:15px;outline:none;transition:border-color .2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold)}
+.fg select option{background:var(--dark4)}
+.fg textarea{resize:vertical;min-height:90px}
+.fsub{width:100%;padding:16px;font-size:19px}
+.fnote{text-align:center;font-size:13px;color:var(--gray);margin-top:12px}
+.fnote a{color:var(--gold);text-decoration:none}
+.binfo{display:flex;flex-direction:column;gap:24px}
+.bicard{background:var(--dark3);border:1px solid rgba(255,255,255,.06);border-radius:8px;padding:24px;display:flex;gap:16px}
+.bicard h4{font-family:var(--ff-sub);font-size:17px;font-weight:700;margin-bottom:4px}
+.bicard p{font-size:14px;color:var(--gray);line-height:1.6}
+.bicard a{color:var(--gold);text-decoration:none;font-weight:700}
+#fsuccess{display:none;background:rgba(40,180,80,.15);border:1px solid rgba(40,180,80,.3);border-radius:8px;padding:20px;text-align:center;color:#4ade80;font-family:var(--ff-sub);font-size:18px;font-weight:700;margin-top:16px}
+@media(max-width:800px){.bgrid{grid-template-columns:1fr}.frow{grid-template-columns:1fr}}
+#reviews{padding:100px 0;background:var(--dark2);overflow:hidden}
+.rtrack{display:flex;gap:24px;margin-top:56px;overflow-x:auto;padding-bottom:16px;scroll-snap-type:x mandatory}
+.rtrack::-webkit-scrollbar{height:3px}.rtrack::-webkit-scrollbar-thumb{background:var(--gold)}
+.rcard{background:var(--dark3);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:32px;min-width:340px;max-width:340px;scroll-snap-align:start;flex-shrink:0;transition:border-color .2s}
+.rcard:hover{border-color:rgba(245,168,0,.2)}
+.rstars{color:var(--gold);font-size:18px;letter-spacing:2px;margin-bottom:16px}
+.rtext{font-size:15px;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:20px;font-style:italic}
+.rauth{display:flex;align-items:center;gap:12px}
+.ravatar{width:42px;height:42px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--ff-sub);font-size:16px;font-weight:700;color:var(--dark);flex-shrink:0}
+.rname{font-family:var(--ff-sub);font-size:15px;font-weight:700}
+.rmeta{font-size:12px;color:var(--gray)}
+#faq{padding:100px 0}
+.flist{max-width:760px;margin:56px auto 0;display:grid;gap:1px;background:rgba(255,255,255,.06)}
+.fi{background:var(--dark2)}
+.fq{width:100%;text-align:left;background:none;border:none;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;font-family:var(--ff-sub);font-size:18px;font-weight:700;color:var(--white);cursor:pointer;gap:16px;transition:color .2s}
+.fq:hover{color:var(--gold)}.fq .ficon{font-size:20px;flex-shrink:0;transition:transform .3s;color:var(--gold)}
+.fq.open .ficon{transform:rotate(45deg)}
+.fa{max-height:0;overflow:hidden;transition:max-height .35s ease}.fa.open{max-height:300px}
+.fa-inner{padding:0 24px 22px;font-size:15px;color:var(--gray);line-height:1.7}
+#chat-bubble{position:fixed;bottom:80px;right:20px;z-index:998;background:var(--dark3);border:2px solid var(--gold);border-radius:100px;padding:12px 20px;cursor:pointer;display:flex;align-items:center;gap:8px;font-family:var(--ff-sub);font-size:15px;font-weight:700;color:var(--white);box-shadow:0 8px 32px rgba(0,0,0,.5);transition:all .2s}
+#chat-bubble:hover{background:var(--gold);color:var(--dark)}
+#chat-bubble .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pdot 1.5s infinite}
+#chat-bubble:hover .dot{background:var(--dark)}
+#chat-panel{position:fixed;bottom:150px;right:20px;width:340px;background:var(--dark3);border:1px solid rgba(255,255,255,.1);border-radius:16px;z-index:998;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.6);display:none;flex-direction:column;max-height:480px}
+#chat-panel.open{display:flex}
+.chead{background:var(--dark4);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.07)}
+.cheadl{display:flex;align-items:center;gap:10px}
+.cavatar{width:36px;height:36px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--ff-head);font-size:16px;color:var(--dark)}
+.cname{font-family:var(--ff-sub);font-size:15px;font-weight:700}
+.cstatus{font-size:11px;color:#4ade80;display:flex;align-items:center;gap:4px}
+.cstatus::before{content:'';width:6px;height:6px;border-radius:50%;background:#4ade80}
+#cclose{background:none;border:none;color:var(--gray);font-size:20px;cursor:pointer;line-height:1}
+#cclose:hover{color:var(--white)}
+#cmsgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px}
+.msg{max-width:85%;padding:12px 14px;border-radius:10px;font-size:14px;line-height:1.5}
+.mbot{background:var(--dark4);border:1px solid rgba(255,255,255,.07);align-self:flex-start;border-radius:4px 12px 12px 12px}
+.musr{background:var(--gold);color:var(--dark);align-self:flex-end;font-weight:600;border-radius:12px 4px 12px 12px}
+.mtyping{display:flex;gap:4px;align-items:center;padding:14px 16px}
+.mtyping span{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:bounce .8s infinite}
+.mtyping span:nth-child(2){animation-delay:.15s}.mtyping span:nth-child(3){animation-delay:.3s}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.cinrow{padding:12px;border-top:1px solid rgba(255,255,255,.07);display:flex;gap:8px}
+#cinput{flex:1;background:var(--dark4);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:10px 14px;color:var(--white);font-family:var(--ff-body);font-size:14px;outline:none;transition:border-color .2s}
+#cinput:focus{border-color:var(--gold)}
+#csend{background:var(--gold);color:var(--dark);border:none;border-radius:8px;padding:10px 16px;cursor:pointer;font-family:var(--ff-sub);font-size:14px;font-weight:700}
+@media(max-width:768px){#chat-bubble,#chat-panel{display:none!important}}
+</style>
+</head>
+<body>
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">⚡ Live Dispatch — Portland &amp; Metro Area</div>
+      <h1 class="hero-h1">
+        <span class="l1">PORTLAND'S</span>
+        <span class="l2">FASTEST TOW</span>
+        <span class="l3">Licensed · Insured · On Time — Every Time</span>
+      </h1>
+      <p class="hero-p">Stuck at 3 AM? Accident on I-84? Engine dead? Flash Towing PDX responds faster, charges fairly, and treats your vehicle like our own.</p>
+      <div class="hero-btns">
+        <a href="tel:9713268952" class="btn btn-gold" style="font-size:20px;padding:16px 32px">📞 Call (971) 326-8952</a>
+        <a href="#book" class="btn btn-outline">Schedule a Tow →</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-pill">4.9★ Google Rating</div>
+        <div class="trust-pill">No Hidden Fees — Ever</div>
+        <div class="trust-pill">Price Guaranteed</div>
+        <div class="trust-pill">Serving Portland Since 2018</div>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="urgency" aria-hidden="true">
+  <div class="urgency-scroll">
+    <span>24/7 Emergency Dispatch</span><span>30-Minute Response</span><span>All Vehicle Types</span><span>No Hidden Fees</span><span>Portland Metro</span><span>Cash for Junk Cars</span><span>Licensed &amp; Insured</span><span>Call (971) 326-8952</span>
+    <span>24/7 Emergency Dispatch</span><span>30-Minute Response</span><span>All Vehicle Types</span><span>No Hidden Fees</span><span>Portland Metro</span><span>Cash for Junk Cars</span><span>Licensed &amp; Insured</span><span>Call (971) 326-8952</span>
+  </div>
+</div>
+<section id="trust-bar">
+  <div class="container">
+    <div class="tnums">
+      <div class="tnum-item fade-up"><div class="tnum-n">30<span style="font-size:2rem">min</span></div><div class="tnum-l">Avg. Response</div></div>
+      <div class="tnum-item fade-up" style="transition-delay:.1s"><div class="tnum-n">24/7</div><div class="tnum-l">Always Available</div></div>
+      <div class="tnum-item fade-up" style="transition-delay:.2s"><div class="tnum-n">500+</div><div class="tnum-l">Monthly Tows</div></div>
+      <div class="tnum-item fade-up" style="transition-delay:.3s"><div class="tnum-n">4.9★</div><div class="tnum-l">Google Rating</div></div>
+    </div>
+  </div>
+</section>
+<section id="services">
+  <div class="container">
+    <div class="svc-hdr fade-up">
+      <div>
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Every Towing &amp;<br><span>Roadside Service</span></h2>
+        <p class="section-sub">From a flat tire on I-205 to a 40-ton rig — if it has wheels, we can move it.</p>
+      </div>
+      <a href="tel:9713268952" class="btn btn-gold" style="align-self:center">Call Now</a>
+    </div>
+    <div class="svc-grid fade-up">
+      <div class="sc feat"><span class="sc-icon">🚨</span><div class="sc-name">Emergency Towing</div><div class="sc-desc">Accidents and breakdowns — dispatched immediately, 24/7.</div></div>
+      <div class="sc"><span class="sc-icon">🚗</span><div class="sc-name">Local Towing</div><div class="sc-desc">Safe, fast flatbed and wheel-lift towing throughout Portland metro.</div></div>
+      <div class="sc"><span class="sc-icon">🛣️</span><div class="sc-name">Long-Distance</div><div class="sc-desc">Cross-state transport across Oregon and beyond.</div></div>
+      <div class="sc"><span class="sc-icon">🚛</span><div class="sc-name">Heavy-Duty Towing</div><div class="sc-desc">Semi-trucks, buses, RVs, and commercial heavy equipment.</div></div>
+      <div class="sc"><span class="sc-icon">📦</span><div class="sc-name">Medium-Duty</div><div class="sc-desc">Box trucks, delivery vans, and larger passenger vehicles.</div></div>
+      <div class="sc"><span class="sc-icon">🏍️</span><div class="sc-name">Motorcycle Towing</div><div class="sc-desc">Specialized straps and padded beds. Zero damage guaranteed.</div></div>
+      <div class="sc"><span class="sc-icon">⚡</span><div class="sc-name">Jump Start</div><div class="sc-desc">Dead battery? High-output jump packs get you running in minutes.</div></div>
+      <div class="sc"><span class="sc-icon">⛽</span><div class="sc-name">Fuel Delivery</div><div class="sc-desc">Ran out of gas? We deliver enough to reach the nearest station.</div></div>
+      <div class="sc"><span class="sc-icon">🔧</span><div class="sc-name">Tire Change</div><div class="sc-desc">Flat on the freeway? Quick spare installation roadside.</div></div>
+      <div class="sc"><span class="sc-icon">🔑</span><div class="sc-name">Lockout Service</div><div class="sc-desc">Keys locked inside? We open your car without damage.</div></div>
+      <div class="sc"><span class="sc-icon">🪝</span><div class="sc-name">Winch Out</div><div class="sc-desc">Stuck in mud, snow, or a ditch? We have the pulling power.</div></div>
+      <div class="sc feat"><span class="sc-icon">💰</span><div class="sc-name">Cash for Junk Cars</div><div class="sc-desc">Top dollar paid. <a href="junk-car.html" style="color:var(--gold)">Get your free offer →</a></div></div>
+    </div>
+  </div>
+</section>
+<div class="cta-strip">
+  <div class="container">
+    <div class="cta-si">
+      <div class="cta-st"><h2>Stranded Right Now?<br>We Are Already On Our Way.</h2><p>Fastest response in Portland metro — guaranteed.</p></div>
+      <div class="cta-sbs">
+        <a href="tel:9713268952" class="btn btn-dark" style="font-size:20px;padding:16px 32px">📞 (971) 326-8952</a>
+        <a href="#book" class="btn btn-outline" style="border-color:rgba(10,10,10,.3);color:var(--dark)">Book Online</a>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="why">
+  <div class="container">
+    <span class="section-label fade-up">Why Flash Towing PDX</span>
+    <h2 class="section-title fade-up">Portland Trusts Us <span>For a Reason</span></h2>
+    <div class="wgrid">
+      <div class="wcards fade-up">
+        <div class="wcard"><div class="wci">⚡</div><div class="wct"><h4>Fastest Response in Portland</h4><p>Average 30-minute arrival anywhere in the metro. We track live traffic.</p></div></div>
+        <div class="wcard"><div class="wci">💯</div><div class="wct"><h4>Price We Quote = Price You Pay</h4><p>Our quoted price is locked and guaranteed — no surprise charges at pick-up.</p></div></div>
+        <div class="wcard"><div class="wci">🛡️</div><div class="wct"><h4>Fully Licensed &amp; Insured</h4><p>Every driver is certified, background-checked, and covered.</p></div></div>
+        <div class="wcard"><div class="wci">🌙</div><div class="wct"><h4>True 24/7 — No Voicemail</h4><p>Call us at 3 AM on Christmas — a real dispatcher always answers.</p></div></div>
+        <div class="wstat"><div class="wn">100%</div><div class="wl">Customer Satisfaction Guarantee</div></div>
+      </div>
+      <div class="fade-up" style="transition-delay:.15s">
+        <span class="section-label">Our Promise</span>
+        <h3 class="section-title" style="font-size:clamp(2rem,4vw,3rem)">We Treat Your Car Like <span>It Is Our Own</span></h3>
+        <p class="section-sub" style="margin-bottom:24px">Every driver has been with us 2+ years. Professionals who know Portland roads cold — not gig workers.</p>
+        <p class="section-sub">When we arrive we explain everything before touching your vehicle. No surprises. No upsells. Just fast honest service.</p>
+        <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="tel:9713268952" class="btn btn-gold">Call Us Now</a>
+          <a href="#book" class="btn btn-outline">Schedule Online</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="book">
+  <div class="container">
+    <div style="text-align:center" class="fade-up">
+      <span class="section-label">Get Help Fast</span>
+      <h2 class="section-title">Schedule Your Tow <span>We Will Call You Back in Minutes</span></h2>
+    </div>
+    <div class="bgrid">
+      <div class="bform fade-up">
+        <form id="towform" onsubmit="submitForm(event)">
+          <div class="frow"><div class="fg"><label>Your Name *</label><input type="text" name="name" placeholder="John Smith" required></div><div class="fg"><label>Phone Number *</label><input type="tel" name="phone" placeholder="(503) 555-0101" required></div></div>
+          <div class="fg"><label>Pickup Location *</label><input type="text" name="pickup" placeholder="Address, intersection, or landmark" required></div>
+          <div class="fg"><label>Drop-off Location</label><input type="text" name="dropoff" placeholder="Where should we take your vehicle?"></div>
+          <div class="frow">
+            <div class="fg"><label>Service Type *</label><select name="service" required><option value="">Select a service</option><option>Emergency Towing</option><option>Local Towing</option><option>Long-Distance Towing</option><option>Heavy-Duty Towing</option><option>Medium-Duty Towing</option><option>Motorcycle Towing</option><option>Jump Start</option><option>Fuel Delivery</option><option>Tire Change</option><option>Lockout Service</option><option>Winch Out</option><option>Cash for Junk Car</option></select></div>
+            <div class="fg"><label>Preferred Date &amp; Time</label><input type="datetime-local" name="datetime"></div>
+          </div>
+          <div class="fg"><label>Vehicle &amp; Notes</label><textarea name="notes" placeholder="Year, make, model and any details"></textarea></div>
+          <button type="submit" class="btn btn-gold fsub">Request Towing Service</button>
+          <p class="fnote">For emergencies call <a href="tel:9713268952">(971) 326-8952</a> directly.</p>
+        </form>
+        <div id="fsuccess">Request received! We will call you within 5 minutes.</div>
+      </div>
+      <div class="binfo fade-up" style="transition-delay:.15s">
+        <div class="bicard"><div style="font-size:24px;flex-shrink:0">📞</div><div><h4>Emergency? Call First.</h4><p>For accidents and urgent situations call directly for fastest response.</p><a href="tel:9713268952">(971) 326-8952</a></div></div>
+        <div class="bicard"><div style="font-size:24px;flex-shrink:0">📍</div><div><h4>Our Location</h4><p>16531 NE Sandy Blvd Suite E Portland, Oregon 97230</p></div></div>
+        <div class="bicard"><div style="font-size:24px;flex-shrink:0">🕐</div><div><h4>Hours</h4><p>Open <strong style="color:var(--gold)">24 hours a day, 7 days a week</strong>, 365 days a year.</p></div></div>
+        <div class="bicard"><div style="font-size:24px;flex-shrink:0">💳</div><div><h4>Payment</h4><p>Cash, all major credit cards, Venmo, and Zelle. Payment after service.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="reviews">
+  <div class="container">
+    <div class="fade-up" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px">
+      <div><span class="section-label">Real Reviews</span><h2 class="section-title">What Portland <span>Is Saying</span></h2></div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px"><span style="font-family:var(--ff-head);font-size:3rem;color:var(--gold)">4.9</span><div><div style="color:var(--gold);font-size:18px;letter-spacing:2px">★★★★★</div><div style="font-size:12px;color:var(--gray)">120+ Google Reviews</div></div></div>
+    </div>
+  </div>
+  <div style="padding-left:max(24px,calc((100vw - 1200px)/2 + 24px))">
+    <div class="rtrack fade-up">
+      <div class="rcard"><div class="rstars">★★★★★</div><p class="rtext">"Stranded on I-84 at 2 AM with a blown tire. Flash Towing was there in 22 minutes flat. Driver was calm, professional, got my car home safely."</p><div class="rauth"><div class="ravatar">JD</div><div><div class="rname">John D.</div><div class="rmeta">Portland, OR · Local Guide</div></div></div></div>
+      <div class="rcard"><div class="rstars">★★★★★</div><p class="rtext">"Fair pricing, zero hidden fees, lightning fast. Used them for a lockout on a Sunday night. Driver showed up in 18 minutes. Cannot recommend enough."</p><div class="rauth"><div class="ravatar" style="background:#E8342A">SM</div><div><div class="rname">Sarah M.</div><div class="rmeta">Beaverton, OR</div></div></div></div>
+      <div class="rcard"><div class="rstars">★★★★★</div><p class="rtext">"Used them to tow my commercial box truck. They had the right heavy-duty equipment and handled it with extreme care. Portland's best towing company."</p><div class="rauth"><div class="ravatar" style="background:#1A1A1A;border:1px solid rgba(245,168,0,.3)">MT</div><div><div class="rname">Michael T.</div><div class="rmeta">Hillsboro, OR · Business Owner</div></div></div></div>
+      <div class="rcard"><div class="rstars">★★★★★</div><p class="rtext">"Called for fuel delivery at 11 PM. Dispatcher was friendly, driver there in 25 minutes, price exactly as quoted. No games. This is who I call every time."</p><div class="rauth"><div class="ravatar" style="background:#222">KR</div><div><div class="rname">Karen R.</div><div class="rmeta">Lake Oswego, OR</div></div></div></div>
+    </div>
+  </div>
+</section>
+<section id="faq">
+  <div class="container">
+    <div style="text-align:center" class="fade-up"><span class="section-label">FAQ</span><h2 class="section-title">Common <span>Questions</span></h2></div>
+    <div class="flist fade-up">
+      <div class="fi"><button class="fq" onclick="tFaq(this)">How fast can you arrive? <span class="ficon">+</span></button><div class="fa"><div class="fa-inner">Average 30 minutes anywhere in Portland metro. Real ETA given when you call.</div></div></div>
+      <div class="fi"><button class="fq" onclick="tFaq(this)">How much does towing cost in Portland? <span class="ficon">+</span></button><div class="fa"><div class="fa-inner">Depends on vehicle type and distance. We provide a transparent quote before dispatching — no hidden fees ever.</div></div></div>
+      <div class="fi"><button class="fq" onclick="tFaq(this)">Do you tow motorcycles and heavy vehicles? <span class="ficon">+</span></button><div class="fa"><div class="fa-inner">Yes — motorcycles to semi-trucks. Specialized flatbeds and heavy wreckers in our fleet.</div></div></div>
+      <div class="fi"><button class="fq" onclick="tFaq(this)">Can you tow my car out of state? <span class="ficon">+</span></button><div class="fa"><div class="fa-inner">Absolutely. Long-distance towing statewide and into Washington, Idaho, and California.</div></div></div>
+      <div class="fi"><button class="fq" onclick="tFaq(this)">Are you open on holidays? <span class="ficon">+</span></button><div class="fa"><div class="fa-inner">Yes — 24 hours a day, 365 days a year including Christmas and Thanksgiving.</div></div></div>
+      <div class="fi"><button class="fq" onclick="tFaq(this)">What payment methods do you accept? <span class="ficon">+</span></button><div class="fa"><div class="fa-inner">Cash, all major credit/debit cards, Venmo, Zelle, and Apple Pay. Payment after service.</div></div></div>
+    </div>
+  </div>
+</section>
+<button id="chat-bubble" onclick="toggleChat()"><span class="dot"></span> Need Help?</button>
+<div id="chat-panel">
+  <div class="chead"><div class="cheadl"><div class="cavatar">F</div><div><div class="cname">Flash Assistant</div><div class="cstatus">Online</div></div></div><button id="cclose" onclick="toggleChat()">x</button></div>
+  <div id="cmsgs"><div class="msg mbot">Hi! I am Flash. Need a tow in Portland? Call <a href="tel:9713268952" style="color:var(--gold)">(971) 326-8952</a> or ask me anything!</div></div>
+  <div class="cinrow"><input id="cinput" type="text" placeholder="Ask about towing..." onkeydown="if(event.key==='Enter')sChat()"><button id="csend" onclick="sChat()">Send</button></div>
+</div>
+<script src="shared.js"></script>
+<script>
+initShared('Home');
+function tFaq(btn){btn.classList.toggle('open');btn.nextElementSibling.classList.toggle('open');}
+function submitForm(e){e.preventDefault();const b=e.target.querySelector('button[type=submit]');b.textContent='Sending...';b.disabled=true;setTimeout(()=>{e.target.style.display='none';document.getElementById('fsuccess').style.display='block';},1200);}
+const CK='YOUR_GEMINI_API_KEY_HERE';const SYS='You are Flash, AI assistant for Flash Towing PDX Portland Oregon. 2-3 sentences max. Phone (971)326-8952. Open 24/7. For emergencies always say call (971)326-8952. Never quote exact prices.';
+let ch=[];
+function toggleChat(){document.getElementById('chat-panel').classList.toggle('open');}
+async function sChat(){
+  const inp=document.getElementById('cinput');const msgs=document.getElementById('cmsgs');
+  const t=inp.value.trim();if(!t)return;inp.value='';
+  const um=document.createElement('div');um.className='msg musr';um.textContent=t;msgs.appendChild(um);
+  const ty=document.createElement('div');ty.className='msg mbot mtyping';ty.innerHTML='<span></span><span></span><span></span>';msgs.appendChild(ty);msgs.scrollTop=msgs.scrollHeight;
+  ch.push({role:'user',parts:[{text:t}]});
+  try{
+    const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${CK}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{role:'user',parts:[{text:SYS}]},{role:'model',parts:[{text:'Ready!'}]},...ch],generationConfig:{maxOutputTokens:200}})});
+    const d=await r.json();const rep=d.candidates?.[0]?.content?.parts?.[0]?.text||'Please call us at (971) 326-8952!';
+    ch.push({role:'model',parts:[{text:rep}]});msgs.removeChild(ty);
+    const bm=document.createElement('div');bm.className='msg mbot';bm.innerHTML=rep.replace(/\(971\) 326-8952/g,'<a href="tel:9713268952" style="color:var(--gold)">(971) 326-8952</a>');msgs.appendChild(bm);msgs.scrollTop=msgs.scrollHeight;
+  }catch(e){msgs.removeChild(ty);const bm=document.createElement('div');bm.className='msg mbot';bm.textContent='Please call us at (971) 326-8952!';msgs.appendChild(bm);}
+}
+</script>
+</body>
+</html>

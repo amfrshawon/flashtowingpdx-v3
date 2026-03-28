@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Towing Tips & Advice Blog | Flash Towing PDX Portland</title>
+<meta name="description" content="Expert towing tips, roadside safety advice, and Portland driving guides from Flash Towing PDX. Stay safe and informed on Portland roads.">
+<link rel="stylesheet" href="shared.css">
+<style>
+.page-hero{padding:140px 0 80px;position:relative;overflow:hidden;background:var(--dark2)}
+.page-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 80px,rgba(245,168,0,.015) 80px,rgba(245,168,0,.015) 82px)}
+#blog-main{padding:80px 0;background:var(--dark)}
+.blog-layout{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+/* FEATURED POST */
+.blog-featured{background:var(--dark2);border:1px solid rgba(255,255,255,.07);border-radius:16px;overflow:hidden;margin-bottom:40px;display:grid;grid-template-columns:1fr 1fr;transition:border-color .2s}
+.blog-featured:hover{border-color:rgba(245,168,0,.25)}
+.blog-featured-img{background:linear-gradient(135deg,#1a0a00,#0a0500);display:flex;align-items:center;justify-content:center;font-size:80px;min-height:280px}
+.blog-featured-body{padding:36px}
+.post-cat{display:inline-block;background:rgba(245,168,0,.1);border:1px solid rgba(245,168,0,.2);border-radius:100px;padding:4px 14px;font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.blog-featured-body h2{font-family:var(--ff-sub);font-size:24px;font-weight:700;color:var(--white);line-height:1.3;margin-bottom:12px}
+.blog-featured-body p{font-size:14px;color:var(--gray);line-height:1.7;margin-bottom:20px}
+.post-meta{display:flex;align-items:center;gap:16px;font-size:12px;color:var(--gray);margin-bottom:20px}
+.post-meta span{display:flex;align-items:center;gap:4px}
+.read-more{font-family:var(--ff-sub);font-size:15px;font-weight:700;color:var(--gold);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:gap .2s}
+.read-more:hover{gap:10px}
+/* BLOG GRID */
+.blog-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.blog-card{background:var(--dark2);border:1px solid rgba(255,255,255,.07);border-radius:12px;overflow:hidden;transition:all .25s}
+.blog-card:hover{border-color:rgba(245,168,0,.25);transform:translateY(-3px)}
+.blog-card-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:48px}
+.blog-card-body{padding:24px}
+.blog-card-body h3{font-family:var(--ff-sub);font-size:18px;font-weight:700;color:var(--white);line-height:1.3;margin-bottom:8px}
+.blog-card-body p{font-size:13px;color:var(--gray);line-height:1.6;margin-bottom:16px}
+/* SIDEBAR */
+.sidebar-widget{background:var(--dark2);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:24px;margin-bottom:24px}
+.sidebar-widget h4{font-family:var(--ff-sub);font-size:16px;font-weight:700;color:var(--white);margin-bottom:16px;border-bottom:1px solid rgba(255,255,255,.07);padding-bottom:12px}
+.sidebar-cta{background:var(--gold);border-radius:12px;padding:28px;text-align:center;margin-bottom:24px}
+.sidebar-cta h4{font-family:var(--ff-head);font-size:24px;color:var(--dark);margin-bottom:8px}
+.sidebar-cta p{font-size:13px;color:rgba(10,10,10,.6);margin-bottom:16px}
+.cat-list{display:grid;gap:8px}
+.cat-item{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:rgba(255,255,255,.7);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);cursor:pointer;transition:color .2s}
+.cat-item:hover{color:var(--gold)}
+.cat-count{background:rgba(255,255,255,.06);border-radius:100px;padding:2px 10px;font-size:12px;font-weight:700}
+.recent-post{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.recent-post:last-child{border-bottom:none;padding-bottom:0}
+.recent-post-thumb{width:60px;height:60px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:28px;background:var(--dark3)}
+.recent-post-info h5{font-family:var(--ff-sub);font-size:14px;font-weight:700;color:var(--white);line-height:1.3;margin-bottom:4px}
+.recent-post-info span{font-size:12px;color:var(--gray)}
+@media(max-width:1000px){.blog-layout{grid-template-columns:1fr}}
+@media(max-width:700px){.blog-featured{grid-template-columns:1fr}.blog-featured-img{min-height:160px}.blog-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <span class="section-label">Flash Towing PDX Blog</span>
+      <h1 class="section-title" style="font-size:clamp(3rem,6vw,5rem)">Towing Tips &amp;<br><span>Road Safety Advice</span></h1>
+      <p class="section-sub">Expert guides, Portland driving tips, and everything you need to know about towing and roadside emergencies.</p>
+    </div>
+  </div>
+</div>
+
+<section id="blog-main">
+  <div class="container">
+    <div class="blog-layout">
+      <!-- MAIN CONTENT -->
+      <div>
+        <!-- Featured Post -->
+        <a href="blog-post.html" style="text-decoration:none">
+          <div class="blog-featured fade-up">
+            <div class="blog-featured-img" style="background:linear-gradient(135deg,#1a0500,#0d0300)">🚨</div>
+            <div class="blog-featured-body">
+              <span class="post-cat">Emergency Tips</span>
+              <h2>What to Do Immediately After a Car Breakdown on I-84</h2>
+              <div class="post-meta">
+                <span>📅 March 15, 2026</span>
+                <span>⏱ 5 min read</span>
+                <span>👁 2,341 views</span>
+              </div>
+              <p>Breaking down on a busy Portland freeway is terrifying. Here is the exact step-by-step guide our dispatchers recommend — from the moment your car stops moving to when the tow truck arrives.</p>
+              <span class="read-more">Read Full Guide →</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog Grid -->
+        <h2 class="section-title" style="margin-bottom:32px;font-size:2rem" class="fade-up">Latest <span>Articles</span></h2>
+        <div class="blog-grid">
+          <a href="blog-post.html" style="text-decoration:none">
+            <div class="blog-card fade-up">
+              <div class="blog-card-img" style="background:linear-gradient(135deg,#0a0a1a,#050510)">❄️</div>
+              <div class="blog-card-body">
+                <span class="post-cat" style="font-size:11px">Winter Driving</span>
+                <h3>Portland Ice Storm Survival: How to Drive (and What to Do When You Can't)</h3>
+                <p>Portland's rare ice storms catch drivers off guard every year. Our drivers share the most common mistakes they see — and how to avoid them.</p>
+                <div class="post-meta"><span>📅 Feb 28, 2026</span><span>⏱ 4 min</span></div>
+                <span class="read-more" style="font-size:14px">Read More →</span>
+              </div>
+            </div>
+          </a>
+          <a href="blog-post.html" style="text-decoration:none">
+            <div class="blog-card fade-up" style="transition-delay:.05s">
+              <div class="blog-card-img" style="background:linear-gradient(135deg,#0a1a00,#050d00)">🔋</div>
+              <div class="blog-card-body">
+                <span class="post-cat" style="font-size:11px">Maintenance</span>
+                <h3>7 Warning Signs Your Car Battery Is About to Die (Before It Leaves You Stranded)</h3>
+                <p>A dead battery is the #1 reason Portland drivers call us for roadside assistance. Here are the signs you need to watch for right now.</p>
+                <div class="post-meta"><span>📅 Feb 14, 2026</span><span>⏱ 3 min</span></div>
+                <span class="read-more" style="font-size:14px">Read More →</span>
+              </div>
+            </div>
+          </a>
+          <a href="blog-post.html" style="text-decoration:none">
+            <div class="blog-card fade-up" style="transition-delay:.1s">
+              <div class="blog-card-img" style="background:linear-gradient(135deg,#1a1000,#0d0800)">💰</div>
+              <div class="blog-card-body">
+                <span class="post-cat" style="font-size:11px">Junk Cars</span>
+                <h3>How Much Is My Junk Car Actually Worth in Portland? (2026 Market Guide)</h3>
+                <p>Salvage values fluctuate with scrap metal prices. Here is what your vehicle is realistically worth right now — by make, model, and condition.</p>
+                <div class="post-meta"><span>📅 Jan 30, 2026</span><span>⏱ 6 min</span></div>
+                <span class="read-more" style="font-size:14px">Read More →</span>
+              </div>
+            </div>
+          </a>
+          <a href="blog-post.html" style="text-decoration:none">
+            <div class="blog-card fade-up" style="transition-delay:.15s">
+              <div class="blog-card-img" style="background:linear-gradient(135deg,#1a0010,#0d0008)">🏍️</div>
+              <div class="blog-card-body">
+                <span class="post-cat" style="font-size:11px">Motorcycle</span>
+                <h3>Motorcycle Towing in Portland: What Every Rider Needs to Know</h3>
+                <p>Towing a motorcycle wrong can cause thousands in damage. Our motorcycle specialists explain the right way — and what to demand from any tow company.</p>
+                <div class="post-meta"><span>📅 Jan 18, 2026</span><span>⏱ 4 min</span></div>
+                <span class="read-more" style="font-size:14px">Read More →</span>
+              </div>
+            </div>
+          </a>
+          <a href="blog-post.html" style="text-decoration:none">
+            <div class="blog-card fade-up" style="transition-delay:.2s">
+              <div class="blog-card-img" style="background:linear-gradient(135deg,#001a1a,#000d0d)">🚛</div>
+              <div class="blog-card-body">
+                <span class="post-cat" style="font-size:11px">Commercial</span>
+                <h3>Heavy-Duty Towing in Portland: What Equipment Does Your Rig Actually Need?</h3>
+                <p>Not all tow trucks can handle a semi. Here is how to find the right heavy-duty wrecker and what questions to ask before your rig is moved.</p>
+                <div class="post-meta"><span>📅 Jan 5, 2026</span><span>⏱ 5 min</span></div>
+                <span class="read-more" style="font-size:14px">Read More →</span>
+              </div>
+            </div>
+          </a>
+          <a href="blog-post.html" style="text-decoration:none">
+            <div class="blog-card fade-up" style="transition-delay:.25s">
+              <div class="blog-card-img" style="background:linear-gradient(135deg,#1a0a00,#0d0500)">⚖️</div>
+              <div class="blog-card-body">
+                <span class="post-cat" style="font-size:11px">Consumer Tips</span>
+                <h3>How to Avoid Predatory Towing Scams in Portland (And What Your Rights Are)</h3>
+                <p>Bait-and-switch pricing and surprise fees are real. Know your rights as an Oregon consumer and the red flags of a shady tow company.</p>
+                <div class="post-meta"><span>📅 Dec 20, 2025</span><span>⏱ 5 min</span></div>
+                <span class="read-more" style="font-size:14px">Read More →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div>
+        <div class="sidebar-cta">
+          <h4>Need a Tow NOW?</h4>
+          <p>We respond in 30 minutes or less, 24/7.</p>
+          <a href="tel:9713268952" class="btn btn-dark" style="width:100%;justify-content:center;font-size:16px">📞 (971) 326-8952</a>
+        </div>
+
+        <div class="sidebar-widget">
+          <h4>Categories</h4>
+          <div class="cat-list">
+            <div class="cat-item"><span>Emergency Tips</span><span class="cat-count">8</span></div>
+            <div class="cat-item"><span>Winter Driving</span><span class="cat-count">5</span></div>
+            <div class="cat-item"><span>Vehicle Maintenance</span><span class="cat-count">12</span></div>
+            <div class="cat-item"><span>Junk Cars</span><span class="cat-count">6</span></div>
+            <div class="cat-item"><span>Motorcycle Towing</span><span class="cat-count">4</span></div>
+            <div class="cat-item"><span>Commercial Towing</span><span class="cat-count">3</span></div>
+            <div class="cat-item"><span>Consumer Tips</span><span class="cat-count">7</span></div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h4>Recent Posts</h4>
+          <div class="recent-post"><div class="recent-post-thumb">🚨</div><div class="recent-post-info"><h5>What to Do After a Breakdown on I-84</h5><span>March 15, 2026</span></div></div>
+          <div class="recent-post"><div class="recent-post-thumb">❄️</div><div class="recent-post-info"><h5>Portland Ice Storm Survival Guide</h5><span>Feb 28, 2026</span></div></div>
+          <div class="recent-post"><div class="recent-post-thumb">🔋</div><div class="recent-post-info"><h5>7 Signs Your Battery Is Dying</h5><span>Feb 14, 2026</span></div></div>
+          <div class="recent-post"><div class="recent-post-thumb">💰</div><div class="recent-post-info"><h5>Junk Car Values in Portland 2026</h5><span>Jan 30, 2026</span></div></div>
+        </div>
+
+        <div class="sidebar-widget" style="background:linear-gradient(135deg,var(--dark3),var(--dark4));border-color:rgba(245,168,0,.2)">
+          <h4 style="color:var(--gold)">Cash for Junk Cars</h4>
+          <p style="font-size:14px;color:var(--gray);line-height:1.7;margin-bottom:16px">Running or not — we buy it. Get top dollar, free pickup.</p>
+          <a href="junk-car.html" class="btn btn-gold" style="width:100%;justify-content:center;font-size:15px">Get Free Offer →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+<script>initShared('Blog');</script>
+</body>
+</html>
